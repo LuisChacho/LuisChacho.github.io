@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quién Quiere Ser Millonario? - Razonamiento Lógico</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="contenedor-juego">
+        <div id="pantalla-inicio" class="pantalla activa">
+            <h1>RAZONAMIENTO LÓGICO</h1>
+            <p class="subtitulo">Demuestra tu agilidad mental para el ingreso a la Universidad</p>
+            <div class="caja-bienvenida">
+                <p class="texto-destacado">¡Bienvenido al desafío definitivo de la mente!</p>
+                <p class="descripcion-reglas">
+                    Te enfrentarás a un banco de 100 preguntas sobre secuencias numéricas, alfabéticas, alfanuméricas, analogías y lógica proposicional. Tienes 4 comodines a tu disposición. ¡Consigue la máxima puntuación!
+                </p>
+            </div>
+            <button id="btn-jugar" class="btn-principal">¡Jugar!</button>
+        </div>
+
+        <div id="pantalla-juego" class="pantalla">
+            <div class="panel-superior">
+                <div class="marcador-puntos">Premio: <span id="puntos-actuales">0</span> PTS</div>
+                <div class="contenedor-comodines">
+                    <button id="comodin-5050" class="btn-comodin">50/50</button>
+                    <button id="comodin-eliminar" class="btn-comodin">Eliminar 1</button>
+                    <button id="comodin-llamada" class="btn-comodin">📞 Llamada</button>
+                    <button id="comodin-publico" class="btn-comodin">👥 Público</button>
+                </div>
+            </div>
+
+            <div id="consola-comodin" class="consola-comodin"></div>
+
+            <div class="bloque-pregunta">
+                <span id="categoria-txt" class="categoria-etiqueta">Categoría</span>
+                <div id="pregunta-txt" class="texto-pregunta">Cargando pregunta...</div>
+                <p id="contador-pregunta" class="contador-pregunta"></p>
+            </div>
+
+            <div class="cuadricula-opciones">
+                <button class="btn-opcion" data-opcion="A"><span class="letra">A</span><span class="txt-opc" id="opc-A"></span></button>
+                <button class="btn-opcion" data-opcion="B"><span class="letra">B</span><span class="txt-opc" id="opc-B"></span></button>
+                <button class="btn-opcion" data-opcion="C"><span class="letra">C</span><span class="txt-opc" id="opc-C"></span></button>
+                <button class="btn-opcion" data-opcion="D"><span class="letra">D</span><span class="txt-opc" id="opc-D"></span></button>
+            </div>
+
+            <div id="panel-retro" class="panel-retroalimentacion">
+                <div id="titulo-retro" class="titulo-retro"></div>
+                <p id="explicacion-txt"></p>
+            </div>
+
+            <button id="btn-siguiente" class="btn-principal btn-siguiente">Siguiente Pregunta</button>
+        </div>
+
+        <div id="pantalla-final" class="pantalla">
+            <h1>¡JUEGO TERMINADO!</h1>
+            <div class="caja-puntuacion-final">
+                <p class="puntuacion-etiqueta">Puntaje Acumulado:</p>
+                <p id="puntos-finales" class="puntos-finales">0</p>
+            </div>
+            <button id="btn-reiniciar" class="btn-principal">Jugar de Nuevo</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
