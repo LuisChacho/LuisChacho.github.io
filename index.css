@@ -28,19 +28,22 @@ h1 { color: var(--dorado); font-size: 2.5rem; margin-bottom: 10px; text-shadow: 
 .btn-comodin:hover:not(:disabled) { background: var(--azul-brillante); color: #000; }
 .btn-comodin:disabled { opacity: 0.3; cursor: not-allowed; }
 .categoria-etiqueta { display: inline-block; background: var(--azul-brillante); color: #000; padding: 4px 12px; border-radius: 15px; font-weight: bold; margin-bottom: 15px; }
-.texto-pregunta { font-size: 1.5rem; margin-bottom: 10px; min-height: 70px; display: flex; align-items: center; justify-content: center; }
+.texto-pregunta { font-size: 1.3rem; margin-bottom: 10px; min-height: 70px; display: flex; align-items: center; justify-content: center; font-weight: 500; }
 .cuadricula-opciones { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 25px; }
-.btn-opcion { background: linear-gradient(90deg, #0d153a 0%, #162265 100%); border: 2px solid rgba(0, 210, 255, 0.5); border-radius: 30px; color: var(--blanco); padding: 15px 25px; font-size: 1.1rem; text-align: left; cursor: pointer; width: 100%; }
-.btn-opcion:hover:not(:disabled) { border-color: var(--dorado); }
+.btn-opcion { background: linear-gradient(90deg, #0d153a 0%, #162265 100%); border: 2px solid rgba(0, 210, 255, 0.5); border-radius: 30px; color: var(--blanco); padding: 15px 25px; font-size: 1.1rem; text-align: left; cursor: pointer; width: 100%; transition: all 0.2s ease; }
+.btn-opcion:hover:not(:disabled) { border-color: var(--dorado); box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); }
 .btn-opcion .letra { color: var(--dorado); font-weight: bold; margin-right: 15px; }
-.btn-opcion.seleccionada-correcta { background: var(--correcto) !important; }
-.btn-opcion.seleccionada-incorrecta { background: var(--incorrecto) !important; }
-.btn-opcion.oculta { visibility: hidden; }
-.panel-retroalimentacion { background: rgba(255, 255, 255, 0.05); border-left: 5px solid var(--dorado); padding: 15px; margin-bottom: 25px; text-align: left; display: none; }
-.consola-comodin { background: #070b1e; border: 1px dashed var(--azul-brillante); padding: 15px; border-radius: 8px; margin-bottom: 20px; color: var(--azul-brillante); display: none; }
-.grafico-publico { display: flex; justify-content: space-around; align-items: flex-end; height: 80px; background: rgba(0,0,0,0.3); padding: 10px; }
-.barra-voto { width: 40px; background: var(--azul-brillante); color: #000; font-weight: bold; text-align: center; }
-.btn-principal { background: var(--dorado); color: #000; font-weight: bold; font-size: 1.3rem; padding: 15px 40px; border: none; border-radius: 30px; cursor: pointer; }
-.btn-siguiente { display: none; }
+.btn-opcion.seleccionada-correcta { background: var(--correcto) !important; border-color: var(--correcto); }
+.btn-opcion.seleccionada-incorrecta { background: var(--incorrecto) !important; border-color: var(--incorrecto); }
+.btn-opcion.oculta { opacity: 0.1; pointer-events: none; }
+.panel-retroalimentacion { background: rgba(0, 184, 148, 0.1); border-left: 5px solid var(--correcto); padding: 15px; margin-bottom: 25px; text-align: left; display: none; border-radius: 0 8px 8px 0; }
+.titulo-retro { font-weight: bold; margin-bottom: 5px; }
+.titulo-retro.bien { color: var(--correcto); }
+.titulo-retro.mal { color: var(--incorrecto); }
+.consola-comodin { background: #070b1e; border: 1px dashed var(--azul-brillante); padding: 15px; border-radius: 8px; margin-bottom: 20px; color: var(--azul-brillante); display: none; text-align: left; }
+.btn-principal { background: var(--dorado); color: #000; font-weight: bold; font-size: 1.3rem; padding: 15px 40px; border: none; border-radius: 30px; cursor: pointer; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4); }
+.btn-principal:hover { background: #f3c200; }
+.btn-siguiente { display: none; margin: 0 auto; }
+.contador-pregunta { color: #8a9fc4; font-size: 0.9rem; margin-top: 5px; }
 .puntos-finales { font-size: 3.5rem; color: var(--dorado); font-weight: bold; }
 @media (max-width: 600px) { .cuadricula-opciones { grid-template-columns: 1fr; } }
